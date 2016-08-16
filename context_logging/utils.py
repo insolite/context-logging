@@ -1,7 +1,7 @@
 import logging
 
-from context_logger_adapter import ContextLoggerAdapter
-from advanced_json_encoder import AdvancedJsonEncoder
+from .context_logger_adapter import ContextLoggerAdapter
+from .advanced_json_encoder import AdvancedJsonEncoder
 
 
 def uncaught_exception(exctype, value, tb):

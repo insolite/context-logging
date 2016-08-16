@@ -8,7 +8,7 @@
 
 ```python
 import logging.config
-from utils import getLogger
+from context_logging import getLogger
 
 
 logging.config.dictConfig({
@@ -52,5 +52,5 @@ See sample.py for full example
 ## Run tests
 
 ```bash
-python3 test.py
+python3 -m unittest discover tests
 ```

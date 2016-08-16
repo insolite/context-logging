@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
 
-import utils
+from context_logging import utils
 
 
 LOGGING_FORMAT = '%(asctime)s %(levelname)-7s %(message)-20s %(context)s'

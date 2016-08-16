@@ -1,6 +1,6 @@
 import logging
 
-from formatters.context_formatter import ContextFormatter
+from .context_formatter import ContextFormatter
 
 
 COLOR_FORMAT = '\x1B[{}'

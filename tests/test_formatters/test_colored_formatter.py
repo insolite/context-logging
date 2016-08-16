@@ -2,7 +2,7 @@ import logging
 from unittest import TestCase
 from unittest.mock import MagicMock
 
-from formatters import ColoredFormatter
+from context_logging.formatters import ColoredFormatter
 
 
 LOGGING_FORMAT = '%(asctime)s %(levelname)-7s %(message)-20s %(context)s'

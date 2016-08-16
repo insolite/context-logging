@@ -2,7 +2,7 @@ from json.encoder import JSONEncoder
 from unittest import TestCase
 from unittest.mock import MagicMock
 
-from context_logger_adapter import ContextLoggerAdapter, EXTRA_KEY
+from context_logging.context_logger_adapter import ContextLoggerAdapter, EXTRA_KEY
 
 
 class ContextLoggerAdapterTest(TestCase):

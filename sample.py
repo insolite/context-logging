@@ -1,7 +1,7 @@
 import sys
 import logging.config
 
-import utils
+from context_logging import getLogger, uncaught_exception # context_logging
 
 
 LOGGING_FORMAT = '%(asctime)s %(levelname)-7s %(message)-20s %(context)s'
@@ -11,7 +11,7 @@ class Example():
 
     def __init__(self, context):
         self.context = context
-        self.logger = utils.getLogger(__name__, context=self.context)
+        self.logger = getLogger(__name__, context=self.context)
 
     def calc(self, src_value):
         self.logger.info('calc', src_value=src_value)
@@ -34,7 +34,7 @@ def init_logging():
                 'format': LOGGING_FORMAT,
             },
             'colored': {
-                '()': 'formatters.colored_formatter.ColoredFormatter',
+                '()': 'context_logging.ColoredFormatter',
                 'format': LOGGING_FORMAT,
             },
         },
@@ -58,7 +58,7 @@ def init_logging():
             },
         }
     })
-    sys.excepthook = utils.uncaught_exception
+    sys.excepthook = uncaught_exception
 
 
 def main():
